@@ -166,7 +166,7 @@ const Intro = () => {
           {/* Continue Button */}
           <div className="flex justify-end mt-12">
             <button 
-              onClick={() => completedSteps === totalSteps && navigate('/builder')}
+              onClick={() => completedSteps === totalSteps && navigate('/builder/provider')}
               className={`
                 px-8 py-4 rounded-xl font-montserrat font-bold text-lg 
                 transition-all duration-300 shadow-lg

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
+import { HiArrowRight } from 'react-icons/hi';
 
 const Hero = () => {
   const [inputName, setInputName] = useState('');
@@ -16,71 +17,86 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh-80px)] mt-20 bg-spacecadet">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12 py-8 lg:py-12">
+    <div 
+      className="min-h-screen h-[90vh]  relative overflow-hidden"
+      style={{
+        backgroundImage: `url('https://i.pinimg.com/736x/d7/af/8c/d7af8c4d281d97497f8fd8ba21316693.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-spacecadet/85 via-[#21253A]/80 to-spacecadet/75" />
+
+      {/* Animated Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -left-4 w-72 h-72 bg-flame rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute top-1/4 -right-4 w-72 h-72 bg-dun rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-flame rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-16 py-12 lg:py-20">
           {/* Left Section */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <div className="max-w-xl">
-              <h1 className="mb-6">
-                <span className="block mt-4 font-montserrat font-semibold text-2xl md:text-3xl lg:text-4xl text-dun">
+          <div className="w-full lg:w-1/2">
+            <div className="relative p-0 rounded-2xl  mb-12">
+              <div className="  rounded-xl p-8 sm:p-12">
+                
+                <p className="font-montserrat text-2xl sm:text-3xl text-dun/80 mb-4">
                   Njia Rahisi ya Kuungana na Web3
-                </span>
-              </h1>
-
-              <p className="font-montserrat text-lg md:text-xl mb-8 text-dun/80">
-                You don't need to learn, just start
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-6 max-w-md">
-                <div className="relative">
-                  <input 
-                    type="text"
-                    placeholder="Andika Jina"
-                    value={inputName}
-                    onChange={(e) => setInputName(e.target.value)}
-                    className="w-full bg-dun/5 backdrop-blur-sm font-montserrat text-lg px-6 py-4 rounded-lg
-                             border-2 border-dun/10 focus:border-flame/50 focus:outline-none
-                             text-dun placeholder-dun/50 transition-all"
-                  />
-                </div>
-
-                <button 
-                  type="submit"
-                  className="w-full sm:w-auto bg-flame text-dun font-montserrat text-lg px-8 py-4 
-                           rounded-lg shadow-md hover:shadow-lg hover:bg-flame/90 
-                           transition-all duration-300 ease-in-out"
-                >
-                  Anza Sasa
-                </button>
-              </form>
+                </p>
+                <p className="font-montserrat text-lg text-flame/90">
+                  You don't need to learn, just start
+                </p>
+              </div>
             </div>
+
+            <form onSubmit={handleSubmit} className="space-y-8 max-w-md">
+              <div className="relative transform hover:scale-[1.02] transition-transform duration-300">
+                <input 
+                  type="text"
+                  placeholder="Andika Jina / Enter Name"
+                  value={inputName}
+                  onChange={(e) => setInputName(e.target.value)}
+                  className="w-full bg-white/5 backdrop-blur-sm font-montserrat text-xl px-8 py-6 rounded-xl
+                           border-2 border-dun/20 focus:border-flame/50 focus:outline-none
+                           text-dun placeholder-dun/50 transition-all"
+                />
+              </div>
+
+              <button 
+                type="submit"
+                className="group w-full bg-gradient-to-r from-flame to-flame/80 text-dun font-montserrat text-xl px-8 py-6 
+                         rounded-xl hover:from-flame/90 hover:to-flame/70 transform hover:scale-[1.02]
+                         transition-all duration-300 ease-in-out flex items-center justify-center gap-3"
+              >
+                <span>Anza Sasa</span>
+                <HiArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </form>
           </div>
 
-          {/* Right Section - Animation Container */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center py-8 lg:py-0">
-            <div className="relative w-full max-w-lg">
-              {/* Gradient orbs */}
-              <div className="absolute top-0 -left-4 w-72 h-72 bg-flame rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-              <div className="absolute top-0 -right-4 w-72 h-72 bg-dun rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-              <div className="absolute -bottom-8 left-20 w-72 h-72 bg-flame rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-              
-              {/* StorySet Animation Container */}
-              <div className="relative">
-                {/* Place your StorySet SVG here */}
-                <svg className="w-full h-auto" viewBox="0 0 500 500">
-                  {/* Your StorySet SVG content will go here */}
-                  {/* For now, showing a placeholder animation */}
-                  <circle cx="250" cy="250" r="100" fill="none" stroke="#E2D2B8" strokeWidth="4" className="animate-pulse"/>
-                  <path d="M250 150 L250 350 M150 250 L350 250" stroke="#EC5022" strokeWidth="4" className="animate-pulse"/>
-                </svg>
-              </div>
+    
+          {/* Right Section - Image */}
+          <div className="w-full lg:w-1/2 mt-6 flex items-center justify-center">
+            <div className="relative w-full max-w-lg overflow-hidden rounded-xl transform hover:scale-[1.02] transition-transform duration-300">
+              <div className="absolute inset-0  border border-dun/50 "></div>
+              <img 
+                src="https://i.pinimg.com/736x/b3/85/14/b38514c2c3e675020da1104bed6cd67b.jpg"
+                alt="Web3 Illustration"
+                className="w-full h-auto object-cover rounded-xl relative z-0"
+                style={{
+                  maxHeight: 'calc(90vh - 4rem)', // Accounting for header and some padding
+                  objectFit: 'contain'
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Add some CSS for the animation */}
+      {/* Animation Styles */}
       <style jsx>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
