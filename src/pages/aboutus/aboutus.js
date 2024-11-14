@@ -1,67 +1,148 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdAgriculture, MdAccountBalance, MdPeople, MdLightbulb } from 'react-icons/md';
 
 const AboutUs = () => {
+  const challenges = [
+    {
+      title: "Localized Content Gap",
+      titleSw: "Pengo la Maudhui ya Ndani",
+      description: "Many learning resources aren't tailored to African realities, missing crucial context about local systems like M-Pesa.",
+      icon: "📚"
+    },
+    {
+      title: "Support Networks",
+      titleSw: "Mitandao ya Usaidizi",
+      description: "Fragmented and limited support networks make it difficult for developers to find help and mentorship.",
+      icon: "🤝"
+    },
+    {
+      title: "Cross-Border Collaboration",
+      titleSw: "Ushirikiano wa Kimataifa",
+      description: "Communication challenges and infrastructure limitations hinder cross-border collaboration.",
+      icon: "🌍"
+    },
+    {
+      title: "Infrastructure Access",
+      titleSw: "Upatikanaji wa Miundombinu",
+      description: "Limited internet and electricity access creates barriers to consistent development work.",
+      icon: "💡"
+    }
+  ];
+
+  const opportunities = [
+    {
+      title: "African Stablecoin",
+      description: "Redefining transactions, investments, and savings across the continent with asset-backed stability",
+      icon: <MdAccountBalance className="w-8 h-8 text-flame" />
+    },
+    {
+      title: "Lower-Cost Remittances",
+      description: "Addressing Africa's high remittance fees through blockchain solutions",
+      icon: <MdPeople className="w-8 h-8 text-flame" />
+    },
+    {
+      title: "Agricultural Supply Chains",
+      description: "Revolutionizing agricultural tracking and trade through blockchain technology",
+      icon: <MdAgriculture className="w-8 h-8 text-flame" />
+    },
+    {
+      title: "Innovation Hub",
+      description: "Creating new opportunities for African developers to lead in Web3",
+      icon: <MdLightbulb className="w-8 h-8 text-flame" />
+    }
+  ];
+
   return (
-    <div className="min-h-[calc(100vh-80px)] mt-20 relative overflow-hidden">
-      {/* Radial gradient background */}
-      <div className="absolute inset-0 bg-spacecadet">
-        <div className="absolute inset-0">
-          <div 
-            className="w-full h-full"
-            style={{
-              background: `
-                radial-gradient(circle at 30% 40%, 
-                  rgba(236, 80, 34, 0.4) 0%, 
-                  rgba(236, 80, 34, 0) 40%
-                ),
-                radial-gradient(circle at 70% 60%, 
-                  rgba(226, 210, 184, 0.4) 0%, 
-                  rgba(226, 210, 184, 0) 40%
-                )
-              `
-            }}
-          />
-        </div>
-      </div>
+    <div className="min-h-screen mt-20 relative overflow-hidden bg-spacecadet">
+      {/* Kanga-inspired pattern overlay */}
+      <div className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23EC5022' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
 
-      {/* Content */}
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-        <div className="bg-spacecadet/30 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-dun/10">
-          <h1 className="font-montserrat text-4xl md:text-5xl font-bold text-dun mb-8">
-            About Us
+      {/* Hero Section */}
+      <section className="relative max-w-6xl mx-auto px-4 py-20">
+        <div className="bg-spacecadet/30 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-dun/10">
+          <h1 className="font-morgath text-5xl md:text-7xl text-dun mb-8">
+            Sanidi
           </h1>
+          <p className="font-montserrat text-2xl text-flame mb-4">
+            "Build" in Swahili—because we're building more than tools, we're building the future.
+          </p>
+          <p className="font-montserrat text-xl text-dun/90 mb-8">
+            Born from the minds of two East African women technologists and co-founders of Daobitat (a property tokenization platform), Sanidi represents a bridge to Africa's Web3 future.
+          </p>
+        </div>
+      </section>
 
-          <div className="space-y-6 font-montserrat text-lg text-dun/90">
-            <p>
-              At <span className="text-flame font-semibold">Sanidi</span>, we are two passionate individuals committed to simplifying your Web3 journey. Our mission is to make connecting to smart contracts easy for everyone, regardless of technical expertise. Whether you're just starting out or have limited knowledge of coding, we're here to guide you every step of the way.
-            </p>
-
-            <p>
-              We believe in the power of community, and that's why our code is open source. Anyone interested in contributing, learning, or sharing knowledge is welcome to join us. We've also incorporated Swahili words to ensure our platform is accessible and easy to understand for Swahili-speaking users.
-            </p>
-
-            <p>
-              Let us help you connect to the future of the web, effortlessly.
-            </p>
-
-            <div className="pt-8">
-              <Link 
-                to="/join"
-                className="inline-block bg-flame text-dun font-montserrat text-lg px-8 py-4 
-                           rounded-lg shadow-lg hover:bg-flame/90 transition-all duration-300
-                           hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Join Us
-              </Link>
+      {/* Mission Section */}
+      <section className="relative max-w-6xl mx-auto px-4 py-20">
+        <div className="bg-flame/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-flame/10">
+          <h2 className="font-morgath text-4xl text-flame mb-8">Our Mission</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/5 p-6 rounded-xl">
+              <h3 className="text-dun text-xl font-bold mb-4">Simplify Web3</h3>
+              <p className="text-dun/80">Creating intuitive, visual tools that make Web3 development accessible to everyone.</p>
+            </div>
+            <div className="bg-white/5 p-6 rounded-xl">
+              <h3 className="text-dun text-xl font-bold mb-4">Empower Africa</h3>
+              <p className="text-dun/80">Enabling African developers to build solutions that address continental needs.</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Additional decorative elements */}
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-flame/10 rounded-full blur-3xl" />
-      <div className="absolute top-0 right-0 w-64 h-64 bg-dun/10 rounded-full blur-3xl" />
+      {/* Challenges Section */}
+      <section className="relative max-w-6xl mx-auto px-4 py-20">
+        <div className="bg-dun/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-dun/10">
+          <h2 className="font-morgath text-4xl text-dun mb-8">The Challenges We Address</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {challenges.map((challenge, index) => (
+              <div key={index} className="bg-white/5 p-6 rounded-xl">
+                <div className="text-3xl mb-4">{challenge.icon}</div>
+                <h3 className="text-dun text-xl font-bold mb-2">{challenge.title}</h3>
+                <p className="text-flame/80 text-sm mb-2">{challenge.titleSw}</p>
+                <p className="text-dun/80">{challenge.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Future Vision Section */}
+      <section className="relative max-w-6xl mx-auto px-4 py-20">
+        <div className="bg-spacecadet/30 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-flame/10">
+          <h2 className="font-morgath text-4xl text-flame mb-8">The Future We See</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {opportunities.map((opportunity, index) => (
+              <div key={index} className="bg-white/5 p-6 rounded-xl">
+                <div className="mb-4">{opportunity.icon}</div>
+                <h3 className="text-dun text-xl font-bold mb-4">{opportunity.title}</h3>
+                <p className="text-dun/80">{opportunity.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="relative max-w-6xl mx-auto px-4 py-20">
+        <div className="text-center">
+          <p className="text-dun/90 text-xl mb-8">
+            Sanidi can't solve everything, but we're committed to fixing this one bit at a time.
+          </p>
+          <Link 
+            to="/join"
+            className="inline-block bg-flame text-dun font-montserrat text-lg px-12 py-6 
+                     rounded-xl shadow-lg hover:bg-flame/90 transition-all duration-300
+                     hover:shadow-xl hover:-translate-y-0.5"
+          >
+            Join Our Journey
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };
