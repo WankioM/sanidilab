@@ -44,10 +44,10 @@ const Hero = () => {
               <div className="  rounded-xl p-8 sm:p-12">
                 
                 <p className="font-montserrat text-2xl sm:text-3xl text-dun/80 mb-4">
-                  Njia Rahisi ya Kuungana na Web3
+                  Because, Why shouldn't Web3 Speak Your Language?
                 </p>
                 <p className="font-montserrat text-lg text-flame/90">
-                  You don't need to learn, just start
+                Kwa nini Web3 isiongee kwa Lugha Yako?
                 </p>
               </div>
             </div>
