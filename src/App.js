@@ -10,6 +10,9 @@ import ChainConfig from './pages/steps/chainconfig/chainconfig';
 import APIKeyExplanation from './pages/steps/getapikey/apiexplanation';
 import GetApiKey from './pages/steps/getapikey/getapikey';
 import Footer from './pages/footer';
+import StarkNetHome from './pages/starknet/StarkNetHome';
+import StarkNetWallet from './pages/starknet/connectwallet/connectwallet';
+import StarkNetBasics from './pages/starknet/basics/basics';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
             <Route path="/builder/provider" element={<GetProvider />} />
             <Route path="/builder/chainconfig" element={<ChainConfig />} />
             <Route path="/builder/getapikey" element={<GetApiKey />} />
+            <Route path="/starknet" element={<StarkNetHome />} />
+            <Route path="/starknet/basics" element={<StarkNetBasics/>} />
+            <Route path="/starknet/connectwallet" element={<StarkNetWallet />} />
           </Routes>
           <Footer />
         </div>
