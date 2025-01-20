@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const StarkNetBasics = () => {
+const StarkNetBasics2 = () => {
   const [activeSection, setActiveSection] = useState(null);
 
   const mainSection = {
@@ -127,4 +127,4 @@ const StarkNetBasics = () => {
   );
 };
 
-export default StarkNetBasics;
+export default StarkNetBasics2;

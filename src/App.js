@@ -13,6 +13,9 @@ import Footer from './pages/footer';
 import StarkNetHome from './pages/starknet/StarkNetHome';
 import StarkNetWallet from './pages/starknet/connectwallet/connectwallet';
 import StarkNetBasics from './pages/starknet/basics/basics';
+import WhatIsStark from './pages/starknet/basics/whatisstark';
+import StarksSnarks from './pages/starknet/basics/starkssnarks';
+import WalletComparison from './pages/starknet/connectwallet/walletcomparison';
 
 function App() {
   return (
@@ -31,7 +34,12 @@ function App() {
             <Route path="/starknet" element={<StarkNetHome />} />
             <Route path="/starknet/basics" element={<StarkNetBasics/>} />
             <Route path="/starknet/connectwallet" element={<StarkNetWallet />} />
-          </Routes>
+            <Route path="/starknet/basics/whatisstark" element={<WhatIsStark />} />
+            <Route path="/starknet/basics/starkssnarks" element={<StarksSnarks />} />
+            <Route path="/starknet/connectwallet/walletcomparison" element={<WalletComparison />} />
+
+            
+                      </Routes>
           <Footer />
         </div>
       </Router>
