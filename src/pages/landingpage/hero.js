@@ -12,7 +12,7 @@ const Hero = () => {
     e.preventDefault();
     if (inputName.trim()) {
       setUserName(inputName.trim());
-      navigate('/intro');
+      navigate('/menu/learningtracks');
     }
   };
 
