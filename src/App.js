@@ -3,12 +3,12 @@ import { UserProvider } from './context/UserContext';
 import Hero from './pages/landingpage/hero';
 import Header from './pages/header';
 import AboutUs from './pages/aboutus/aboutus';
-import Intro from './pages/steps/intro/intro';
+import Intro from './pages/wagmi/intro/intro';
 import JoinUs from './pages/joinus/joinus';
-import GetProvider from './pages/steps/getprovider/getprovider';
-import ChainConfig from './pages/steps/chainconfig/chainconfig';
-import APIKeyExplanation from './pages/steps/getapikey/apiexplanation';
-import GetApiKey from './pages/steps/getapikey/getapikey';
+import GetProvider from './pages/wagmi/getprovider/getprovider';
+import ChainConfig from './pages/wagmi/chainconfig/chainconfig';
+import APIKeyExplanation from './pages/wagmi/getapikey/apiexplanation';
+import GetApiKey from './pages/wagmi/getapikey/getapikey';
 import Footer from './pages/footer';
 import StarkNetHome from './pages/starknet/StarkNetHome';
 import StarkNetWallet from './pages/starknet/connectwallet/connectwallet';
@@ -16,6 +16,7 @@ import StarkNetBasics from './pages/starknet/basics/basics';
 import WhatIsStark from './pages/starknet/basics/whatisstark';
 import StarksSnarks from './pages/starknet/basics/starkssnarks';
 import WalletComparison from './pages/starknet/connectwallet/walletcomparison';
+import LearningTracks from './pages/menu/learningtracks';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/starknet/basics/whatisstark" element={<WhatIsStark />} />
             <Route path="/starknet/basics/starkssnarks" element={<StarksSnarks />} />
             <Route path="/starknet/connectwallet/walletcomparison" element={<WalletComparison />} />
+            <Route path="/menu/learningtracks" element={<LearningTracks />} />
 
             
                       </Routes>
