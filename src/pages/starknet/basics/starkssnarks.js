@@ -122,7 +122,8 @@ const StarksSnarks = () => {
   };
 
   return (
-    <div className="min-h-screen bg-spacecadet flex flex-col">
+    
+    <div className="min-h-[90vh] bg-spacecadet flex flex-col pt-10">
       {/* Header */}
       <div className="h-[8vh] bg-spacecadet/90 border-b border-dun/20 flex items-center justify-center">
         <h1 className="text-2xl font-morgath text-flame">STARKs vs SNARKs</h1>

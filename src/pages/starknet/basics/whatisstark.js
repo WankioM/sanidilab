@@ -56,13 +56,13 @@ const WhatIsStark = () => {
   };
 
   const handleNext = () => {
-    navigate('/next-question');
+    navigate('/starknet/basics/starkssnarks');
   };
 
   const allOptionsSelected = selectedAnswers.size === questions[0].options.length;
 
   return (
-    <div className="h-screen relative overflow-hidden bg-spacecadet flex flex-col">
+    <div className="h-min[90vh] relative overflow-hidden bg-spacecadet flex flex-col pt-10">
       {/* Header taking 8% of viewport height */}
       <div className="h-[8vh] bg-spacecadet/90 border-b border-dun/20 flex items-center justify-center">
         <h1 className="text-2xl font-morgath text-flame">StarkNet Quiz</h1>

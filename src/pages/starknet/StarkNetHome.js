@@ -10,7 +10,7 @@ const StarkNetHome = () => {
       id: 'basics',
       titleEn: 'Understand StarkNet Basics',
       titleSw: 'Fahamu Misingi ya StarkNet',
-      path: '/starknet/basics'
+      path: '/starknet/basics/whatisstark'
     },
     {
         id: 'wallet',
