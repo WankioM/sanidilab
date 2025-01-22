@@ -30,6 +30,12 @@ const Header = () => {
               About
             </Link>
             <Link 
+              to="/sanidi-central" 
+              className="font-montserrat text-dun hover:text-flame transition-colors duration-200"
+            >
+              Sanidi Central
+            </Link>
+            <Link 
               to="/joinus" 
               className="font-montserrat px-4 py-2 bg-flame text-dun rounded-lg 
                         hover:bg-flame/90 transition-colors duration-200"

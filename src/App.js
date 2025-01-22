@@ -17,6 +17,7 @@ import WhatIsStark from './pages/starknet/basics/whatisstark';
 import StarksSnarks from './pages/starknet/basics/starkssnarks';
 import WalletComparison from './pages/starknet/connectwallet/walletcomparison';
 import LearningTracks from './pages/menu/learningtracks';
+import SanidiCentral from './pages/sanidicentral/sanidicentral';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/starknet/basics/starkssnarks" element={<StarksSnarks />} />
             <Route path="/starknet/connectwallet/walletcomparison" element={<WalletComparison />} />
             <Route path="/menu/learningtracks" element={<LearningTracks />} />
+            <Route path="/sanidi-central" element={<SanidiCentral />} />
 
             
                       </Routes>
