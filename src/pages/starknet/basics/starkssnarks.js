@@ -1,113 +1,13 @@
 import React, { useState } from 'react';
+import { translations } from './starkssnarkstranslation'; // Import the translations
 
 const StarksSnarks = () => {
   const [flippedCards, setFlippedCards] = useState(new Set());
+  const [language, setLanguage] = useState('en');
 
-  const cards = [
-    {
-      id: 1,
-      frontTitle: "STARKs",
-      frontEmoji: "⚡",
-      frontContent: {
-        title: "Scalable Transparent ARguments of Knowledge",
-        points: [
-          "Post-quantum secure",
-          "Lower gas fees",
-          "Higher computing power"
-        ]
-      },
-      backTitle: "STARKS-KEY FEATURES",
-      backEmoji: "⚡",
-      backContent: {
-        sections: [
-          {
-            title: "Transparency",
-            text: "Transparent, no trusted setup required"
-          },
-          
-          {
-            title: "Proof Generation Efficiency",
-            text: "Efficient for large computations, highly scalable"
-          },
-          {
-            title: "Scalability",
-            text: "Highly scalable, suitable for large datasets and complex computations"
-          },
-          {
-            title: "Quantum Resistance",
-            text: "More resistant to quantum attacks due to reliance on hash functions"
-          }
-        ]
-      }
-    },
-    {
-      id: 2,
-      frontTitle: "SNARKs",
-      frontEmoji: "🔒",
-      frontContent: {
-        title: "Succinct Non-interactive ARguments of Knowledge",
-        points: [
-          "Smaller proof size",
-          "Trusted setup required",
-          "Vulnerable to quantum"
-        ]
-      },
-      backTitle: "SNARKs-KEY FEATURES",
-      backEmoji: "🔒",
-      backContent: {
-        sections: [
-          {
-            title: "Transparency",
-            text: "Requires a trusted setup"
-          },
-          
-          {
-            title: "Proof Generation Efficiency",
-            text: "Efficient, but less scalable for very large computations"
-          },
-          {
-            title: "Scalability",
-            text: "Scalable, but less so compared to zk-STARKs"
-          },
-          {
-            title: "Quantum Resistance",
-            text: "Potentially vulnerable to quantum attacks due to elliptic curve cryptography"
-          }
-        ]
-      }
-    },
-    {
-      id: 3,
-      frontTitle: "Comparison",
-      frontEmoji: "⚖️",
-      frontContent: {
-        title: "STARKs vs SNARKs",
-        points: [
-          "Different security models",
-          "Trade-offs in performance",
-          "Setup requirements vary"
-        ]
-      },
-      backTitle: "Key Differences",
-      backContent: {
-        sections: [
-          {
-            title: "SNARKS",
-            text: "SNARKs focusing on succinctness and non-interactivity"
-          },
-                        
-          {
-           title: "STARKS",
-            text: "STARKs emphasizing scalability and transparency"
-          },
-          {
-            title: "Programming Language",
-             text: "STARKs uses CAIRO while SNARKS uses Solidity"
-           }
-        ]
-      }
-    }
-  ];
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'sw' : 'en');
+  };
 
   const toggleCard = (id) => {
     setFlippedCards(prev => {
@@ -121,12 +21,21 @@ const StarksSnarks = () => {
     });
   };
 
+  const currentTranslations = translations[language];
+
   return (
-    
-    <div className="min-h-[90vh] bg-spacecadet flex flex-col pt-10">
-      {/* Header */}
-      <div className="h-[8vh] bg-spacecadet/90 border-b border-dun/20 flex items-center justify-center">
-        <h1 className="text-2xl font-morgath text-flame">STARKs vs SNARKs</h1>
+    <div className="min-h-[90vh] bg-spacecadet flex flex-col pt-20">
+      {/* Header with Language Toggle Button */}
+      <div className="h-[8vh] bg-spacecadet/90 border-b border-dun/20 flex items-center justify-between px-4">
+        <h1 className="text-2xl font-morgath text-flame">
+          {currentTranslations.header.title}
+        </h1>
+        <button 
+          onClick={toggleLanguage} 
+          className="h-[16vh]px-4 py-2 bg-flame text-white rounded-md hover:bg-flame/80 transition-colors"
+        >
+          {currentTranslations.header.languageButton}
+        </button>
       </div>
 
       {/* Main content */}
@@ -137,14 +46,14 @@ const StarksSnarks = () => {
         {/* Cards Container */}
         <div className="relative z-10 container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cards.map(card => (
+            {currentTranslations.cards.map(card => (
               <div 
-                key={card.id} 
+                key={card.frontTitle} 
                 className="perspective-1000 cursor-pointer h-[400px]"
-                onClick={() => toggleCard(card.id)}
+                onClick={() => toggleCard(card.frontTitle)}
               >
                 <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d
-                  ${flippedCards.has(card.id) ? 'rotate-y-180' : ''}`}
+                  ${flippedCards.has(card.frontTitle) ? 'rotate-y-180' : ''}`}
                 >
                   {/* Front */}
                   <div className="absolute w-full h-full backface-hidden">

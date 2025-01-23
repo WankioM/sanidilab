@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const StarkNetBasics2 = () => {
   const [activeSection, setActiveSection] = useState(null);
 
