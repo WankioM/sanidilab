@@ -2,7 +2,7 @@ export const translations = {
   en: {
     header: {
       title: "STARKs vs SNARKs",
-      languageButton: "Switch Language"
+      languageButton: "Switch to Kiswahili"
     },
     cards: [
       {
@@ -74,7 +74,7 @@ export const translations = {
   },
   sw: {
     header: {
-      title: "STARKs dhidi ya SNARKs",
+      title: "Tofauti ya STARKs na SNARKs",
       languageButton: "Badili Lugha"
     },
     cards: [
