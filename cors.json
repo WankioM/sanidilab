@@ -1,8 +1,11 @@
+
 [
     {
-      "origin": ["https://sanidilab.vercel.app/"],
+      "origin": ["https://sanidilab.vercel.app", "http://localhost:3000"],
       "method": ["GET"],
       "responseHeader": ["Content-Type"],
       "maxAgeSeconds": 3600
     }
-  ]
+]
+
+
