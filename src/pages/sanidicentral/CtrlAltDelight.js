@@ -17,7 +17,7 @@ const CtrlAltDelight = () => {
         {
           id: 2,
           date: "23 JAN 2025",
-          thumbnail: "${THUMBNAIL_URL}/mojojojo.png?",
+          thumbnail: `${THUMBNAIL_URL}/mojojojo.png?authuser=1`,
           title: "Open Source & Internet Eras: Reclaiming the Web",
           titleSw: "Programu Huria na Vipindi vya Intaneti: Kurejesha Wavuti",
           description: "Exploring the evolution of the internet through three eras and how open source principles shape Sanidi's mission for inclusivity",
@@ -27,7 +27,7 @@ const CtrlAltDelight = () => {
         {
           id: 3,
           date: "14 FEB 2024",
-          thumbnail: "${THUMBNAIL_URL}/man.png",
+          thumbnail: `${THUMBNAIL_URL}/man.png`,
           title: "Digital Identities: Messy, Clean & Everything In Between",
           titleSw: "Vitambulisho vya Kidijitali: Vyenye Changamoto na Suluhisho",
           description: "Examining the complexity of online identities and how they reflect our ever-changing human nature in the digital age",

@@ -38,7 +38,7 @@ const SanidiCentral = () => {
   const CurrentComponent = sections[activeSection].component;
 
   return (
-    <div className="min-h-[92vh] bg-spacecadet pt-20 relative">
+    <div className="min-h-[92vh] bg-spacecadet pt-20 pb-16 relative">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-4 w-72 h-72 bg-flame rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
