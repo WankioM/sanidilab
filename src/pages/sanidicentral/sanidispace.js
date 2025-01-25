@@ -7,16 +7,17 @@ const SanidiSpace = () => {
   const projects = [
     {
       id: 1,
-      title: "DeFi Education Platform",
-      titleSw: "Jukwaa la Elimu ya DeFi",
-      creator: "Sarah M.",
-      description: "A comprehensive learning platform for DeFi concepts built using Sanidi's tools.",
-      descriptionSw: "Jukwaa kamili la kujifunza dhana za DeFi lililojengwa kwa kutumia zana za Sanidi.",
-      likes: 234,
-      category: "Education",
+      title: "DAO-bitat: Fractional Real Estate Ownership",
+      titleSw: "DAO-bitat: Umiliki wa Mali Isiyohamishika kwa Sehemu",
+      creator: "Njeri W, Tracy W.",
+      description: "A blockchain-powered platform enabling fractional ownership of real estate through tokenisation, fostering collaborative investment and accessibility.",
+      descriptionSw: "Jukwaa linalotumia blockchain kuwezesha umiliki wa mali isiyohamishika kwa sehemu kupitia tokenisation, likihimiza uwekezaji wa pamoja na ufikivu.",
+      likes: 421,
+      category: "Prop Tech",
       thumbnail: "/api/placeholder/400/320",
-      link: "https://defi-edu.example.com"
+      link: "www.daobitat.xyz"
     },
+    
     {
       id: 2,
       title: "Community NFT Marketplace",

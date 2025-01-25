@@ -2,6 +2,7 @@ import React from 'react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 import { THUMBNAIL_URL } from '../../config/config';
 
+
 const CtrlAltDelight = () => {
     const episodes = [
         {
@@ -17,7 +18,7 @@ const CtrlAltDelight = () => {
         {
           id: 2,
           date: "23 JAN 2025",
-          thumbnail: `${THUMBNAIL_URL}/mojojojo.png?authuser=1`,
+          thumbnail: `${THUMBNAIL_URL}/mojojojo.jpg?authuser=1`,
           title: "Open Source & Internet Eras: Reclaiming the Web",
           titleSw: "Programu Huria na Vipindi vya Intaneti: Kurejesha Wavuti",
           description: "Exploring the evolution of the internet through three eras and how open source principles shape Sanidi's mission for inclusivity",
@@ -27,7 +28,7 @@ const CtrlAltDelight = () => {
         {
           id: 3,
           date: "14 FEB 2024",
-          thumbnail: `${THUMBNAIL_URL}/man.png`,
+          thumbnail: `${THUMBNAIL_URL}/man.png?authuser=1`,
           title: "Digital Identities: Messy, Clean & Everything In Between",
           titleSw: "Vitambulisho vya Kidijitali: Vyenye Changamoto na Suluhisho",
           description: "Examining the complexity of online identities and how they reflect our ever-changing human nature in the digital age",

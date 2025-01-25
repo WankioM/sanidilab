@@ -26,7 +26,19 @@ const MediumArticles = () => {
       descriptionSw: "Mwongozo kamili wa kuchagua blockchain kulingana na mahitaji ya mradi wako, kutoka kasi ya miamala hadi msaada wa ikolojia.",
       tags: ["Blockchain", "Development", "Guide", "Technical"],
       link: "https://medium.com/@tracywankio29/choosing-the-right-blockchain-a-guide-to-making-the-best-choice-for-your-project-939d35cf3cc0"
+    },
+    {
+      id: 3,
+      date: "Jan 25, 2025",
+      readTime: "8 min read",
+      title: "Not So Direct Democracy: A Smarter Approach to Web3 Governance",
+      titleSw: "Sio Demokrasia ya Moja kwa Moja: Njia Bora kwa Utawala wa Web3",
+      description: "An insightful exploration of why direct democracy often falls short in Web3 governance and how indirect accountability can lead to more effective and equitable decision-making.",
+      descriptionSw: "Uchunguzi wenye maarifa wa kwa nini demokrasia ya moja kwa moja mara nyingi inashindwa katika utawala wa Web3 na jinsi uwajibikaji wa moja kwa moja unaweza kusababisha maamuzi bora na ya haki.",
+      tags: ["Web3", "Governance", "Blockchain", "Accountability"],
+      link: "https://medium.com/@tracywankio29/not-so-direct-democracy-a-smarter-approach-to-web3-governance-ec6e028df055"
     }
+    
   ];
 
   return (

@@ -8,6 +8,15 @@ const LearningTracks = () => {
 
   const tracks = [
     {
+      id: 'blockchain',
+      titleEn: 'Blockchain Basics',
+      titleSw: 'Misingi ya Blockchain',
+      descEn: 'Learn to build on StarkNet - from basics to advanced smart contracts',
+      descSw: 'Jifunze misingi ya blockchain - kutoka dhana za msingi hadi teknolojia ya kisasa',
+      path: '/blockchain-basics',
+      color: 'from-flame/20 to-flame/10'
+    },
+    {
       id: 'starknet',
       titleEn: 'StarkNet Development',
       titleSw: 'Maendeleo ya StarkNet',
@@ -48,36 +57,36 @@ const LearningTracks = () => {
         </div>
 
         {/* Tracks Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {tracks.map((track) => (
-            <button
-              key={track.id}
-              onClick={() => navigate(track.path)}
-              onMouseEnter={() => setHoveredTrack(track.id)}
-              onMouseLeave={() => setHoveredTrack(null)}
-              className="group relative h-96 w-full rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-[1.02]"
-            >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${track.color} backdrop-blur-sm`} />
-              
-              {/* Content */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                <div>
-                  <h2 className="text-3xl font-montserrat font-bold text-dun mb-2 transition-all duration-300">
-                    {hoveredTrack === track.id ? track.titleSw : track.titleEn}
-                  </h2>
-                  <p className="text-lg text-dun/80 transition-all duration-300">
-                    {hoveredTrack === track.id ? track.descSw : track.descEn}
-                  </p>
-                </div>
-                
-                <div className="flex items-center text-flame group-hover:translate-x-2 transition-all duration-300">
-                  <HiArrowRight className="w-8 h-8" />
-                </div>
-              </div>
-            </button>
-          ))}
+     
+<div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+  {tracks.map((track) => (
+    <button
+      key={track.id}
+      onClick={() => navigate(track.path)}
+      onMouseEnter={() => setHoveredTrack(track.id)}
+      onMouseLeave={() => setHoveredTrack(null)}
+      className="group relative h-72 w-full rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-[1.02]"
+    >
+      {/* Rest of the button content stays the same */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${track.color} backdrop-blur-sm`} />
+      
+      <div className="absolute inset-0 p-6 flex flex-col justify-between">
+        <div>
+          <h2 className="text-2xl font-montserrat font-bold text-dun mb-2 transition-all duration-300">
+            {hoveredTrack === track.id ? track.titleSw : track.titleEn}
+          </h2>
+          <p className="text-base text-dun/80 transition-all duration-300">
+            {hoveredTrack === track.id ? track.descSw : track.descEn}
+          </p>
         </div>
+        
+        <div className="flex items-center text-flame group-hover:translate-x-2 transition-all duration-300">
+          <HiArrowRight className="w-6 h-6" />
+        </div>
+      </div>
+    </button>
+  ))}
+</div>
       </div>
 
       {/* Animation Styles */}

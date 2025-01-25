@@ -1,11 +1,8 @@
-
 [
     {
       "origin": ["https://sanidilab.vercel.app", "http://localhost:3000"],
-      "method": ["GET"],
-      "responseHeader": ["Content-Type"],
+      "method": ["GET", "HEAD", "OPTIONS"],
+      "responseHeader": ["Content-Type", "Access-Control-Allow-Origin", "Authorization"],
       "maxAgeSeconds": 3600
     }
-]
-
-
+  ]
