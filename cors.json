@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["https://sanidilab.vercel.app/"],
+      "method": ["GET"],
+      "responseHeader": ["Content-Type"],
+      "maxAgeSeconds": 3600
+    }
+  ]

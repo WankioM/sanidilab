@@ -1,32 +1,33 @@
 import React from 'react';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import { THUMBNAIL_URL } from '../../config/config';
 
 const CtrlAltDelight = () => {
     const episodes = [
         {
           id: 1,
           date: "15 JAN 2025",
-          thumbnail: "/api/placeholder/400/320",
+          thumbnail: `${THUMBNAIL_URL}/1.png?authuser=1`,
           title: "Sanidi: Web3 Made Easy",
           titleSw: "Sanidi: Web3 Imerahisishwa",
           description: "Introduction to Sanidi's open-source platform, featuring no-code smart contract creation and multilingual support for inclusive Web3 development",
           descriptionSw: "Utangulizi wa jukwaa la Sanidi, linalotoa uundaji rahisi wa mikataba mahiri na msaada wa lugha nyingi",
-          zoraLink: "https://zora.co/episode-1"
+          zoraLink: "https://x.com/i/status/1879538895857320046",
         },
         {
           id: 2,
-          date: "21 FEB 2024",
-          thumbnail: "/api/placeholder/400/320",
+          date: "23 JAN 2025",
+          thumbnail: "${THUMBNAIL_URL}/mojojojo.png?",
           title: "Open Source & Internet Eras: Reclaiming the Web",
           titleSw: "Programu Huria na Vipindi vya Intaneti: Kurejesha Wavuti",
           description: "Exploring the evolution of the internet through three eras and how open source principles shape Sanidi's mission for inclusivity",
           descriptionSw: "Kuchunguza maendeleo ya intaneti kupitia vipindi vitatu na jinsi kanuni za programu huria zinavyounda dhamira ya Sanidi",
-          zoraLink: "https://zora.co/episode-2"
+          zoraLink: "https://x.com/i/status/1882349672745869313"
         },
         {
           id: 3,
           date: "14 FEB 2024",
-          thumbnail: "/api/placeholder/400/320",
+          thumbnail: "${THUMBNAIL_URL}/man.png",
           title: "Digital Identities: Messy, Clean & Everything In Between",
           titleSw: "Vitambulisho vya Kidijitali: Vyenye Changamoto na Suluhisho",
           description: "Examining the complexity of online identities and how they reflect our ever-changing human nature in the digital age",

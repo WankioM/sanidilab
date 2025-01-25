@@ -1,0 +1,1 @@
+export const THUMBNAIL_URL = 'https://storage.googleapis.com/sanidi-images/CADthumbnails';
