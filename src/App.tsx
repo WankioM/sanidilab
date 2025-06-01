@@ -14,7 +14,7 @@ import SanidiCentral from './pages/sanidicentral/sanidicentral';
 import PlatformOverview from './pages/aboutus/platform/PlatformOverview';
 import PlatformCapabilities from './pages/aboutus/platform/PlatformCapabilities';
 import TechnicalSpecifications from './pages/aboutus/platform/TechnicalSpecifications';
-import VisualContractBuilder from './pages/aboutus/platform/VisualContractBuilder';
+import VisualContractBuilder from './pages/builder/VisualContractBuilder';
 import EnterpriseIntegration from './pages/aboutus/platform/EnterpriseIntegration';
 import MultiLanguageInterface from './pages/aboutus/platform/MultiLanguageInterface';
 

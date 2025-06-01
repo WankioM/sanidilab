@@ -112,12 +112,12 @@ const Header: React.FC = () => {
               <div 
                 key={item.label}
                 className="relative group"
-                onMouseEnter={() => handleDropdownEnter(item.label)}
-                onMouseLeave={handleDropdownLeave}
               >
                 <Link 
                   to={item.href}
                   className="font-montserrat text-dun hover:text-flame transition-colors duration-300 flex items-center gap-1"
+                  onMouseEnter={() => setActiveDropdown(item.label)}
+                  
                 >
                   {item.label}
                   {item.dropdown && (
@@ -136,20 +136,24 @@ const Header: React.FC = () => {
                 
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 w-80 bg-spacecadet/98 backdrop-blur-md border border-flame/30 rounded-xl shadow-2xl mt-2 z-[9999] max-h-[60vh] overflow-y-auto animate-fadeInDown">
-                    <div className="absolute inset-0 bg-gradient-to-br from-flame/8 to-transparent pointer-events-none rounded-xl"></div>
+                  <div 
+                    className="absolute top-full left-0 w-80 bg-spacecadet/98 backdrop-blur-md border border-dun/30 rounded-xl shadow-2xl mt-1 z-[9999] max-h-[60vh] overflow-y-auto animate-fadeInDown"
+                    onMouseEnter={() => setActiveDropdown(item.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-dun/5 to-transparent pointer-events-none rounded-xl"></div>
                     <div className="relative z-10 py-2">
                       {item.dropdown.map((dropdownItem, index) => (
                         <Link
                           key={`${dropdownItem.href}-${index}`}
                           to={dropdownItem.href}
-                          className="relative block px-5 py-3 text-sm text-dun hover:text-flame hover:bg-flame/15 transition-all duration-200 group mx-2 my-1 rounded-lg"
+                          className="relative block px-5 py-3 text-sm text-dun hover:bg-dun/10 transition-all duration-200 group mx-2 my-1 rounded-lg"
                           onClick={handleDropdownItemClick}
                         >
-                          <div className="font-semibold group-hover:text-flame transition-colors duration-200">
+                          <div className="font-semibold transition-colors duration-200">
                             {dropdownItem.label}
                           </div>
-                          <div className="text-xs text-dun/70 group-hover:text-flame/90 transition-colors duration-200 mt-1">
+                          <div className="text-xs text-dun/70 transition-colors duration-200 mt-1">
                             {dropdownItem.description}
                           </div>
                           <div className="absolute left-0 top-0 w-1 h-full bg-flame scale-y-0 group-hover:scale-y-100 transition-transform duration-200 origin-top rounded-r"></div>
@@ -281,7 +285,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* CSS Animations */}
-      <style >{`
+      <style>{`
         @keyframes fadeInDown {
           from {
             opacity: 0;

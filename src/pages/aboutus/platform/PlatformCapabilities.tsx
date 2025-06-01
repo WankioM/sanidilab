@@ -10,7 +10,7 @@ import {
 } from 'react-icons/hi';
 
 // Import the capability components
-import VisualContractBuilder from './VisualContractBuilder';
+import VisualContractBuilder from '../../builder/VisualContractBuilder';
 import EnterpriseIntegration from './EnterpriseIntegration';
 import MultiLanguageInterface from './MultiLanguageInterface';
 

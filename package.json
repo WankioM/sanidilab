@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/gsap": "^3.0.0",
+    "blockly": "^12.1.0",
     "gsap": "^3.13.0",
     "marked": "^15.0.0",
     "react": "^18.3.1",
