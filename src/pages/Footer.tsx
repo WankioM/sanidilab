@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { FaTwitter, FaGlobe, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 
-const Footer = () => {
-  const [showScroll, setShowScroll] = useState(false);
-  const [isHoveringProverb, setIsHoveringProverb] = useState(false);
+interface SocialLink {
+  name: string;
+  icon: React.ReactNode;
+  url: string;
+  hoverColor: string;
+  label: string;
+}
+
+interface SocialCategory {
+  category: string;
+  links: SocialLink[];
+}
+
+const Footer: React.FC = () => {
+  const [showScroll, setShowScroll] = useState<boolean>(false);
+  const [isHoveringProverb, setIsHoveringProverb] = useState<boolean>(false);
 
   useEffect(() => {
-    const checkScrollTop = () => {
+    const checkScrollTop = (): void => {
       if (!showScroll && window.pageYOffset > 400) {
         setShowScroll(true);
       } else if (showScroll && window.pageYOffset <= 400) {
@@ -18,14 +31,18 @@ const Footer = () => {
     return () => window.removeEventListener('scroll', checkScrollTop);
   }, [showScroll]);
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
 
-  const socialLinks = [
+  const handleProverbHover = (isHovering: boolean): void => {
+    setIsHoveringProverb(isHovering);
+  };
+
+  const socialLinks: SocialCategory[] = [
     {
       category: 'Organization',
       links: [
@@ -73,6 +90,8 @@ const Footer = () => {
     }
   ];
 
+  const currentYear: number = new Date().getFullYear();
+
   return (
     <footer className="relative bg-spacecadet/95 text-dun py-12">
       {/* Main Footer Content */}
@@ -82,12 +101,18 @@ const Footer = () => {
           <div className="relative group">
             <div 
               className="transform transition-transform duration-300 hover:scale-105"
-              onMouseEnter={() => setIsHoveringProverb(true)}
-              onMouseLeave={() => setIsHoveringProverb(false)}
+              onMouseEnter={() => handleProverbHover(true)}
+              onMouseLeave={() => handleProverbHover(false)}
             >
               <h3 className="text-flame font-semibold mb-2">Swahili Proverb</h3>
-              <p className="text-dun/90 italic mb-1">Maji huenda kwa mto, na wanadamu huenda kwa wenzao</p>
-              <p className={`text-dun/70 text-sm transition-opacity duration-300 ${isHoveringProverb ? 'opacity-100' : 'opacity-0'}`}>
+              <p className="text-dun/90 italic mb-1">
+                Maji huenda kwa mto, na wanadamu huenda kwa wenzao
+              </p>
+              <p 
+                className={`text-dun/70 text-sm transition-opacity duration-300 ${
+                  isHoveringProverb ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
                 (Water flows to the river, and humans go to their fellow humans)
               </p>
             </div>
@@ -132,13 +157,12 @@ const Footer = () => {
               ))}
             </div>
           </div>
-        
         </div>
 
         {/* Copyright Line */}
         <div className="mt-8 pt-8 border-t border-dun/10 text-center">
           <p className="text-dun/60 text-sm">
-            © {new Date().getFullYear()} Daobitat. All rights reserved.
+            © {currentYear} Daobitat. All rights reserved.
           </p>
         </div>
       </div>
@@ -150,6 +174,7 @@ const Footer = () => {
                    ${showScroll ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
         onClick={scrollToTop}
         aria-label="Scroll to top"
+        type="button"
       >
         <FaArrowUp className="w-5 h-5" />
       </button>
@@ -160,7 +185,7 @@ const Footer = () => {
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-dun rounded-full mix-blend-multiply filter blur-3xl opacity-5 animate-blob animation-delay-2000"></div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }

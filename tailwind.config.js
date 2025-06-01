@@ -14,6 +14,10 @@ module.exports = {
         flame: "#EC5022",
         dun: "#E2D2B8",
         spacecadet: "#21253A",
+
+        //Don't use unless its a special object
+        darkcyan : "#4B8F8C",
+        ebony : "#606D5D",
       },
     },
   },
